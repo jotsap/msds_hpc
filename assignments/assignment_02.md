@@ -2,7 +2,7 @@
   
   
 **Voyager-EUS2**  
-Number 10 spot, and Microsoft Cloud's #1 spot was the Voyager-EUS2 running in US East 2 of Microsoft Azure Cloud. This is huge considering that a cloud computing solution is in the top 10 spot, this introduces opportunities for enormous cost savings for customers who do not have the capital to purchase their own HPC clusters.  
+Number 10 spot, and Microsoft Cloud's #1 spot was the Voyager-EUS2 running in US East 2 of Microsoft Azure Cloud. This is huge considering that a cloud computing solution is in the top 10 spot, this introduces opportunities for enormous cost savings for customers who do not have the capital to purchase their own HPC clusters. This system I believe was primarily just performance testing as opposed to being for business use case. Its also worth mentioning that Microsoft Azure is currently the only one of the big three (Microsoft, Amazon, and Google) that actually offers Virtual Machines with both Nvidia GPUs *and* InifiniBand back end connectivity. 
   
 * Manufacturer: Microsoft Azure
 * System Model: ND96amsr_A100_v4
@@ -20,7 +20,7 @@ Number 10 spot, and Microsoft Cloud's #1 spot was the Voyager-EUS2 running in US
   
   
 **Descartes Labs Amazon EC2 Instance Cluster**  
-#49 spot and #1 AWS workload Amazon EC2 Instance Cluster us-east-1a in the Descartes Labs site.
+#49 spot and #1 AWS workload Amazon EC2 Instance Cluster us-east-1a in the Descartes Labs site. Note that it uses Ethernet instead of InifiniBand for network connectivity. Additionally, instead of using an established Linux Distro, it actually uses AWS's flavor, which I believe have some customer performance enhancements for running on their platform. No GPU's in this cluster, just the Intel Skylake CPU's. Compared to the Azure Cluster above it has relatively low cores per socket: only 18 vs Voyager's 64.
   
 * Manufacturer: Amazon
 * System Model: EC2 r5.24xlarge
@@ -39,10 +39,7 @@ Number 10 spot, and Microsoft Cloud's #1 spot was the Voyager-EUS2 running in US
   
   
 **Perlmutter**  
-#5 Spot is Perlmutter which is the fastest cluster that does NOT rely on InfiniBand for network connectivity, but rather standard Ethernet
-
-HPE Cray EX235n, AMD EPYC 7763 64C 2.45GHz, NVIDIA A100 SXM4 40 GB, Slingshot-10 in the US site DOE/SC/LBNL/NERSC. Unlike the other two based on a Cluster architecture, this is based on MPP
-
+#5 Spot is Perlmutter which is the fastest cluster that does NOT rely on InfiniBand for network connectivity, but rather standard Ethernet. It is an HPE Cray EX235n using an AMD EPYC 64 Core CPU and NVIDIA GPU copreccessor. Unlike the other two based on a Cluster architecture, this is based on MPP (Massively Parallel Processing), which from what I know, can be extremely difficult to program and are primarly designed for Embarassingly Parallel problems.
 
 * Manufacturer: HPE
 * System Model: HPE Cray EX235n
