@@ -23,11 +23,11 @@
 * Speed: DDR3L-1600
 * Size: 16GB (16384 MB)
   
-**STORAGE: : %SYSTEMDRIVE% **
+**STORAGE: : %SYSTEMDRIVE%**
 * Size: 256GB SSD
 * Interconnect: SATA
   
-**STORAGE: D: Drive **
+**STORAGE: D: Drive**
 * Size: 1TB HDD
 * Interconnect: SATA
 
