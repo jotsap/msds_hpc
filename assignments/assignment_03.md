@@ -2,11 +2,11 @@
   
   
 **CPU**
-* Model: Intel core i5-6200U 2.3GHz
-* Cores: 2 Physical (4 logical)
-* Instruction Set: 
-* Vector Extensions: 
-* Cache Size:
+* Model: Intel core i5-6200U 2.3GHz (Skylake)
+* Cores: 2 Physical (4 logical with Hyper-threading)
+* Instruction Set: 64 bit
+* Vector Extensions: SSE 4.2 and AVX2
+* Cache Size: 3 MB "Smart Cache"
   
 **GPU**
 * Model: Nvidia GeForce 940M
@@ -20,7 +20,7 @@
 * Interconnect: PCI Express x4 Gen3
   
 **RAM**
-* Speed: DDR3
+* Speed: DDR3L-1600
 * Size: 16GB (16384 MB)
   
 **STORAGE: : %SYSTEMDRIVE% **
