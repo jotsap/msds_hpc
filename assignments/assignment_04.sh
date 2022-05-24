@@ -7,7 +7,7 @@ curl https://www.gutenberg.org/files/829/829-0.txt --output travel.txt
 split --number=l/5 travel.txt travelsplit
 
 # call python prime loop
-python prime.py
+python3 prime.py
 
 # move splits into folders
 mv travelsplitaa folder1/
