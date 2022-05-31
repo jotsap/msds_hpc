@@ -7,8 +7,10 @@ I ran into so many problems and was able to resolve most of them but stuck at th
 * the ssh'd lab02.tar file would not run remotely, and trying to run locally gave error about fakeroot being needed
 * I tried using the docker hub instead but had challenges getting image pushed properly
   
-See images: https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/lab02-crash.PNG
-Whenever I try to run the commands it hangs
+See images: https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/lab02-crash.PNG  
+Whenever I try to run the commands it errors  
+INFO:    Starting build...
+FATAL:   While performing build: conveyor failed to get: Unexpected tar manifest.json: expected 1 item, got 2
 
 
 Using image and copying to M2 as **lab02.tar**  
