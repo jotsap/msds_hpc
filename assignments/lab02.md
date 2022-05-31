@@ -6,3 +6,17 @@ I ran into so many problems and was able to resolve most of them but stuck at th
 * build-essentials also was not installed, nor was gzip, unzip, or curl
 * the ssh'd lab02.tar file would not run remotely, and trying to run locally gave error about fakeroot being needed
 * I tried using the docker hub instead but had challenges getting image pushed properly
+  
+See images: https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/lab02-hang.PNG  
+Whenever I try to run the commands it hangs
+
+
+Using image and copying to M2 as **lab02.tar**  
+docker save lab02 | ssh jotsap@m2.smu.edu 'bash -l -c "cat > $HOME/lab02/lab02.tar\
+&& module load singularity\
+&& singularity build -F lab02.sif docker-archive:$HOME/lab02/lab02.tar\
+&& singularity exec lab02.sif whoami"'
+  
+Using Docker Hub same thing [NOTE: INSTRUCTIONS COPIED TO TEAMS]
+ssh jotsap@m2.smu.edu 'bash -l -c "module load singularity\
+&& singularity run docker://jotsap/smulab:latest -c "import numpy as np; print(np.pi)\""'
