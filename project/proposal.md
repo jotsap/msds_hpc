@@ -70,9 +70,12 @@ RESPONSE:
 Currently in development. Not sure if AutoML should be part of this?
 
 ### Tools for implementing the workflow  
-I am initially developing this model in R. I'm using Caret on training data for hyperparameter tuning and AutoML
+I am initially developing this model in R. I'm using Caret on training data for hyperparameter tuning and AutoML  
+Additionally R has packages that can parallelize such as RevoScaleR and doParallel()  
 
-## Possible performance optimization targets  
-TBD
+
+### Possible performance optimization targets  
+Parallelizing R operations  
+Having Python make the R calls so it can parallelize the operations  
 
 
