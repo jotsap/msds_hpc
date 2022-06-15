@@ -1,0 +1,8 @@
+spack:
+  specs:
+  - python@3.8.12
+  - py-pandas
+  - py-joblib
+  - py-scipy
+  - py-threadpoolctl
+  concretization: together
