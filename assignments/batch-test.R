@@ -20,7 +20,7 @@ cut(
 
 
 # data output
-setwd("$WORK")
+setwd("$WORK/batchtest")
 write.csv(credit.df, file = "batchout.csv", row.names = T)
 
 
