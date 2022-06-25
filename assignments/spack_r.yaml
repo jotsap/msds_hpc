@@ -1,0 +1,17 @@
+spack:
+  definitions:
+  - compilers: [gcc@12.1.0]
+  - packages:
+    - r@4.1.3 +X +external-lapack
+    - openblas@0.3.20 threads=openmp 
+  - targets: [target=broadwell]
+  specs:
+  - matrix:
+    - [$%compilers]
+    - [$packages]
+    - [$targets]
+  concretizer:
+    reuse: false
+    unify: true
+  config:
+    install_missing_compilers: true
