@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@jotsap 
-jotsap
-/
-msds_hpc
-Public
-forked from SouthernMethodistUniversity/msds_hpc
-Code
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-Settings
-msds_hpc/assignments/batchtest.sbatch
-@jotsap
-jotsap Update batchtest.sbatch
-Latest commit 4552b76 6 hours ago
- History
- 1 contributor
-64 lines (47 sloc)  1.85 KB
-
 #!/bin/bash
 #SBATCH -J batchtest
 #SBATCH -o batchtest_%j.out
@@ -90,17 +61,3 @@ module load R                          # Load R, change version as needed
 R --vanilla < array_example_${SLURM_ARRAY_TASK_ID}.R
 # Edit R script name as needed; ${SLURM_ARRAY_TASK_ID} is array index
 
-
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
