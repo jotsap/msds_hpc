@@ -3,7 +3,7 @@
 install.packages("tidyverse")
 library(tidyverse)
 # load file
-credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/creditcardsmall.csv", header = T)
+credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/Kaggle_Credit_Small.csv", header = T)
 
 ### data munge
 
@@ -20,6 +20,5 @@ cut(
 
 
 # data output
-setwd("$WORK/batchtest")
-write.csv(credit.df, file = "batchout.csv", row.names = T)
-
+#setwd("$HOME/batch_R")
+write_csv(credit.df, path = file.path( "~/batch_R/batchout.csv"), col_names = T)
