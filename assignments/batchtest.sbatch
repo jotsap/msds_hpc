@@ -13,6 +13,8 @@ wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-te
 module purge
 module load r/4.0.2
 Rscript batch-test.R
+
+time Rscript pi_monte_carlo_parallel.R 10000000 ${SLURM_CPUS_PER_TASK}
 # sbatch -p htc --mem=6G --wrap "sleep 30; time Rscript pi_monte_carlo_serial.R 1000"
 
 cat /proc/cpuinfo
