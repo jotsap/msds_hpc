@@ -21,4 +21,5 @@ cut(
 
 # data output
 #setwd("$HOME/batch_R")
-write_csv(credit.df, path = file.path( "~/batch_R/batchout.csv"), col_names = T)
+setwd("/work/users/jotsap")
+write_csv(credit.df, path = file.path( "~/batchtest/batchout.csv"), col_names = T)
