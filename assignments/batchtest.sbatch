@@ -14,7 +14,7 @@ module purge
 module load r/4.0.2
 Rscript batch-test.R
 
-time Rscript pi_monte_carlo_parallel.R 10000000 ${SLURM_CPUS_PER_TASK}
+# time Rscript pi_monte_carlo_parallel.R 10000000 ${SLURM_CPUS_PER_TASK}
 # sbatch -p htc --mem=6G --wrap "sleep 30; time Rscript pi_monte_carlo_serial.R 1000"
 
 cat /proc/cpuinfo
@@ -25,6 +25,8 @@ echo "Number of nodes is $SLURM_NNODES"
 echo "Memory per Node is $SLURM_MEM_PER_NODE"
 echo "Memory per CPU is $SLURM_MEM_PER_CPU"
 echo "Cores per Node is $SLURM_CPUS_ON_NODE"
+
+
 
 
 ##### M2  hpc/exmples/r ######
