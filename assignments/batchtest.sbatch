@@ -11,7 +11,7 @@ cd $WORK/batchtest/
 wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-test.R
 
 module purge
-module load r-base
+module load r/4.0.2
 Rscript batch-test.R
 
 cat /proc/cpuinfo
