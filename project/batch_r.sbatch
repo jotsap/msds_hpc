@@ -7,12 +7,11 @@
 #SBATCH --cpus-per-task=1
 
 module purge
-. $WORK/spack/share/spack/setup-env.sh
-spack env activate r-batch
 
-mkdir $WORK/batch_r/
-cd $WORK/batch_r/
 wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-test.R
+
+source /work/users/jotsap/spack/share/spack/setup-env.sh
+spack env activate r-batch
 
 Rscript batch-test.R
 
