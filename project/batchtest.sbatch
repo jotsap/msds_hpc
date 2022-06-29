@@ -10,6 +10,12 @@ module purge
 . spack/share/spack/setup-env.sh
 spack env activate r-batch
 
+mkdir $HOME/batch_r/
+cd $HOME/batch_r/
+wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-test.R
+
+Rscript batch-test.R
+
 cat /proc/cpuinfo
 echo "Job ID is $SLURM_JOBID"
 echo "Job Name is $SLURM_JOB_NAME"
