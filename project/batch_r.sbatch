@@ -10,8 +10,8 @@ module purge
 . $WORK/spack/share/spack/setup-env.sh
 spack env activate r-batch
 
-mkdir $HOME/batch_r/
-cd $HOME/batch_r/
+mkdir $WORK/batch_r/
+cd $WORK/batch_r/
 wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-test.R
 
 Rscript batch-test.R
