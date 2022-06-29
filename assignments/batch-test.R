@@ -1,11 +1,13 @@
-# data load script
+
 # install library
-install.packages("tidyverse")
-library(tidyverse)
-# load file
+library(magrittr)
+library(dplyr)
+
+### DATA LOAD
+
 credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/creditcardsmall.csv", header = T)
 
-### data munge
+### DATA MUNGE
 
 # create transaction amount categories
 cut(
@@ -19,9 +21,12 @@ cut(
 (credit.df$newbalanceDest - credit.df$oldbalanceDest) -> credit.df$deltaBalanceDest
 
 
-# data output
-setwd("$WORK/batchtest")
-write.csv(credit.df, file = "batchout.csv", row.names = T)
+### DATA OUTPUT
+# setwd("$WORK/batchtest")
+# write.csv(credit.df, file = "batchout.csv", row.names = T)
+
+write.csv(credit.df, file = file.path("/work/users/jotsap/batchtest/batchout.csv"), row.names = T)
+
 
 
 
