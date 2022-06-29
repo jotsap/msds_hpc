@@ -25,7 +25,7 @@ cut(
 # setwd("$WORK/batchtest")
 # write.csv(credit.df, file = "batchout.csv", row.names = T)
 
-write.csv(credit.df, file = file.path("/work/users/jotsap/batchtest/batchout.csv"), row.names = T)
+write.csv(credit.df, file = file.path("~/batch_r/batchout.csv"), row.names = T)
 
 
 
