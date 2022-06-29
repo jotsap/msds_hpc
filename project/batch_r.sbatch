@@ -7,6 +7,7 @@
 #SBATCH --cpus-per-task=1
 
 module purge
+module load spack
 . spack/share/spack/setup-env.sh
 spack env activate r-batch
 
