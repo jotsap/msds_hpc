@@ -22,10 +22,10 @@ cut(
 
 
 ### DATA OUTPUT
-# setwd("$WORK/batchtest")
-# write.csv(credit.df, file = "batchout.csv", row.names = T)
+# setwd("$WORK/batch_r")
+# write.csv(credit.df, file = "batch_r_out.csv", row.names = T)
 
-write.csv(credit.df, file = file.path("~/batch_r/batchout.csv"), row.names = T)
+write.csv(credit.df, file = file.path("/work/users/jotsap/batch_r/batch_r_out.csv"), row.names = T)
 
 
 
