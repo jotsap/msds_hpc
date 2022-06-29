@@ -10,11 +10,17 @@ mkdir $WORK/batchtest/
 cd $WORK/batchtest/
 wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/batch-test.R
 
+### using module
 module purge
 module load r/4.0.2
 Rscript batch-test.R
 
-time Rscript pi_monte_carlo_parallel.R 10000000 ${SLURM_CPUS_PER_TASK}
+### using spack
+. /work/users/jotsap/spack/share/spack/setup-env.sh
+spack env activate r-batch
+
+Rscript pi_monte_carlo_parallel.R ${SLURM_CPUS_PER_TASK}
+# srun -p htc --mem=4G Rscript batch-test.R
 # sbatch -p htc --mem=6G --wrap "sleep 30; time Rscript pi_monte_carlo_serial.R 1000"
 
 cat /proc/cpuinfo
