@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -l
 #SBATCH -J rbatch
 #SBATCH -o rbatch_%j.out
 #SBATCH -p development
