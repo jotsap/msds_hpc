@@ -10,6 +10,12 @@ spack:
     - [$%compilers]
     - [$packages]
     - [$targets]
+  - r-cluster
+  - r-magrittr
+  - r-dplyr
+  - r-fpc
+  - r-dendextend
+  - r-ggplot2
   concretization: together
   config:
     install_missing_compilers: true
