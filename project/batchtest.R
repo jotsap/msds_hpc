@@ -1,11 +1,12 @@
-# data load script
-# install library
-install.packages("tidyverse")
-library(tidyverse)
-# load file
+
+### INSTALL LIBRARY
+library(magrittr)
+library(dplyr)
+
+### DATA LOAD
 credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/Kaggle_Credit_Small.csv", header = T)
 
-### data munge
+### DATA MUNGE
 
 # create transaction amount categories
 cut(
@@ -19,7 +20,15 @@ cut(
 (credit.df$newbalanceDest - credit.df$oldbalanceDest) -> credit.df$deltaBalanceDest
 
 
-# data output
-#setwd("$HOME/batch_R")
-setwd("/work/users/jotsap")
-write_csv(credit.df, path = file.path( "~/batchtest/batchout.csv"), col_names = T)
+### DATA OUTPUT
+# setwd("$WORK/batch_r")
+# write.csv(credit.df, file = "rbatchout.csv", row.names = T)
+write.csv(credit.df, file = file.path("/work/users/jotsap/rbatch/rbatchout.csv"), row.names = T)
+
+# DPLYR OUTPUT
+#setwd("/work/users/jotsap")
+#write_csv(credit.df, path = file.path( "~/batchtest/batchout.csv"), col_names = T)
+
+
+
+
