@@ -5,7 +5,7 @@ library(dplyr)
 
 ### DATA LOAD
 
-credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/creditcardsmall.csv", header = T)
+credit.df <- read.csv("https://raw.githubusercontent.com/jotsap/msds_hpc/main/project/Kaggle_Credit_Small.csv", header = T)
 
 ### DATA MUNGE
 
@@ -27,7 +27,9 @@ cut(
 
 write.csv(credit.df, file = file.path("/work/users/jotsap/rbatch/rbatchout.csv"), row.names = T)
 
-
+# DPLYR OUTPUT
+#setwd("/work/users/jotsap")
+#write_csv(credit.df, path = file.path( "~/batchtest/batchout.csv"), col_names = T)
 
 
 
