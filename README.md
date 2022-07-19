@@ -26,3 +26,6 @@
 | P4         | 06-23  | 06-28 | Implement one subtask of your workflow using "easiest" installation path.                |
 | P5         | 06-30  | NA    | Explore various file formats for your data and compare performance.                      |
 | P6         | 07-05  | 07-12 | Complete non-optimized and basic workflow, reduce data or analysis complexity if needed. |
+| P7         | 07-14  | 07-19 | Report three targets for optimization and baseline performance                           |
+| P8         | 07-19  | 07-28 | Implement initial improvements for your three optimization targets                       |
+
