@@ -13,9 +13,7 @@ histogram.png: histogram.tsv
 histogram.tsv: histogram.r words.txt
 	Rscript $<
 
-words.txt: /usr/share/dict/words
-	cp $< $@
+words.txt: /users/jotsap/lab03
+	Rscript -e 'download.file("http://svnweb.freebsd.org/base/head/share/dict/web2?view=co", destfile = "words.txt", quiet = TRUE)'
 
-# words.txt:
-#	Rscript -e 'download.file("http://svnweb.freebsd.org/base/head/share/dict/web2?view=co", destfile = "words.txt", quiet = TRUE)'
 
