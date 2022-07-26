@@ -4,20 +4,6 @@ Looking at doing a fraud detection binomial prediction model. Currently evaluati
 
 
 ### Data source  
-I have 3 different data sets of credit transactions which I am currently evaluating  
-  
-**Data Flair: Credit Card Fraud - 143 MB**  
-https://data-flair.training/blogs/data-science-machine-learning-project-credit-card-fraud-detection/  
-Dimensions: 284,808 Rows & 30 Predictors  
- 
-Predictors: 
-* Time: Int
-* V1 through V28: Int [6 sig digits]
-* Amount: Float [2 sig digits]
-
-RESPONSE:
-* Class [boolean]
-
 
 **Rpubs: Fraud Detection - 470 MB**  
 https://rpubs.com/casater/621482
@@ -36,36 +22,6 @@ Dimensions: 1,048,576 Rows & 9 Predictors
 RESPONSE:
 * isFraud [boolean]: identifies a fraudulent transaction (1) and non fraudulent (0)
   
-  
-**Kaggle: Credit Card Fraud - 344 MB**  
-https://www.kaggle.com/datasets/kartik2112/fraud-detection
-Dimensions: 555,718 Rows & 22 Predictors
-
-* trans_date_trans_time
-* cc_num
-* merchant
-* category
-* amt
-* first
-* last
-* gender
-* street
-* city
-* state
-* zip
-* lat
-* long
-* city_pop
-* job	dob  
-* trans_num  
-* unix_time  
-* merch_lat  
-* merch_long  
-
-RESPONSE:
-* is_fraud  
-  
-
 ### Analysis workflow  
 Currently in development. Not sure if AutoML should be part of this?
 
@@ -75,7 +31,21 @@ Additionally R has packages that can parallelize such as RevoScaleR and doParall
 
 
 ### Possible performance optimization targets  
-Parallelizing R operations  
-Having Python make the R calls so it can parallelize the operations  
+NOTE: this will be detailed in my Project Write-up / Presentation
+
+**Data Loading**
+Initially I placed the data file on Azure Blob storage, however it literally took OVER AN HOUR, so instead I staged the data on M2 $WORK
+  
+**Data Cleaning**
+I got a *small* processing improvement using Dplyr as it has vectorized operations for several of the steps
+
+**Data Modeling**
+Using **Ranger** was leverates C++ libraries which offers performance improvement over the default RandomForest. Additionally using **Caret** and **Parallel** library, you can actually parallelize the model training processes
+
+
+
+
+
+
 
 
