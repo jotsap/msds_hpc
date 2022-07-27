@@ -23,5 +23,6 @@ Using Docker Hub same thing [NOTE: INSTRUCTIONS COPIED TO TEAMS]
 ssh jotsap@m2.smu.edu 'bash -l -c "module load singularity\
 && singularity run docker://jotsap/smulab:latest -c "import numpy as np; print(np.pi)\""'
 
-###Please See Spack Tutorial on Teams  
+## #Please See Spack Tutorial on Teams  
 In the **Group Lab** teams channel see the WIKI on top  
+NOTE: I also copied to **HPC_TEAMS_WIKI.DOCX**
