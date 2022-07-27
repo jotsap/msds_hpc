@@ -5,9 +5,14 @@
 #SBATCH --mem=6G
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
-
 module purge
-module load singularity
+
+wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/assignment05.R
+
+source /work/users/jotsap/spack/share/spack/setup-env.sh
+spack env activate r-base
+
+Rscript assignment05.R
 
 cat /proc/cpuinfo
 echo "Job ID is $SLURM_JOBID"
