@@ -2,17 +2,17 @@
 #SBATCH -J assignment_05
 #SBATCH -o assignment_05_%j.out
 #SBATCH -p htc
-#SBATCH --mem=6G
+#SBATCH --mem=4G
 #SBATCH --nodes=1
 #SBATCH --cpus-per-task=1
 module purge
 
-wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/assignment05.R
+wget https://raw.githubusercontent.com/jotsap/msds_hpc/main/assignments/assignment_05.R
 
 source /work/users/jotsap/spack/share/spack/setup-env.sh
 spack env activate r-base
 
-Rscript assignment05.R
+Rscript assignment_05.R
 
 cat /proc/cpuinfo
 echo "Job ID is $SLURM_JOBID"
