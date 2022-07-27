@@ -934,6 +934,22 @@ cache_alignment : 64
 address sizes   : 46 bits physical, 48 bits virtual
 power management:
 
+> head(credit.df)
+  step     type   amount    nameOrig oldbalanceOrg newbalanceOrig    nameDest
+1    1  PAYMENT  9839.64 C1231006815        170136      160296.36 M1979787155
+2    1  PAYMENT  1864.28 C1666544295         21249       19384.72 M2044282225
+3    1 TRANSFER   181.00 C1305486145           181           0.00  C553264065
+4    1 CASH_OUT   181.00  C840083671           181           0.00   C38997010
+5    1  PAYMENT 11668.14 C2048537720         41554       29885.86 M1230701703
+6    1  PAYMENT  7817.71   C90045638         53860       46042.29  M573487274
+  oldbalanceDest newbalanceDest isFraud isFlaggedFraud
+1              0              0       0              0
+2              0              0       0              0
+3              0              0       1              0
+4          21182              0       1              0
+5              0              0       0              0
+6              0              0       0              0
+
 Job ID is 30088654
 Job Name is assignment_05
 Cluster Name is slurm_cluster
