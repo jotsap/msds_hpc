@@ -5,9 +5,9 @@ Looking at doing a fraud detection binomial prediction model. Currently evaluati
 
 ### Data source  
 
-**Rpubs: Fraud Detection - 470 MB**  
-https://rpubs.com/casater/621482
-Dimensions: 1,048,576 Rows & 9 Predictors
+**[Kaggle: Fraud Detection]**(https://www.kaggle.com/datasets/ealaxi/paysim1)
+Size: 470MB  
+Dimensions: 6.3 Million Rows & 9 Predictors
 
 * step [int]: Maps a unit of time in the real world. In this case 1 step is 1 hour of time. Total steps 744 (30 days simulation).
 * type [factor]: CASH-IN, CASH-OUT, DEBIT, PAYMENT and TRANSFER
@@ -23,7 +23,9 @@ RESPONSE:
 * isFraud [boolean]: identifies a fraudulent transaction (1) and non fraudulent (0)
   
 ### Analysis workflow  
-Currently in development. Not sure if AutoML should be part of this?
+* Load Data
+* Clean & Process Data
+* Train Model
 
 ### Tools for implementing the workflow  
 I am initially developing this model in R. I'm using Caret on training data for hyperparameter tuning and AutoML  
